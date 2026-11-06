@@ -1,0 +1,51 @@
+{
+  "version": "v2",
+  "generated_at": "2026-11-06",
+  "count": 2,
+  "quotes": [
+    {
+      "budget": {
+        "id": "ENT-R1",
+        "client": "Control de rechazo",
+        "event": "Control de atomicidad",
+        "items": [
+          {
+            "id": 1,
+            "description": "Mesa plegable",
+            "category": "mobiliario",
+            "quantity": 1,
+            "unit_price": 100,
+            "currency": "ARS"
+          }
+        ]
+      },
+      "exchange_rates": {},
+      "currency": "ARS",
+      "rules": []
+    },
+    {
+      "budget": {
+        "id": "ENT-R2",
+        "client": "Control de rechazo",
+        "event": "Control de atomicidad",
+        "items": [
+          {
+            "id": 1,
+            "description": "Mesa plegable",
+            "category": "mobiliario",
+            "quantity": 1,
+            "unit_price": 100,
+            "currency": "ARS"
+          }
+        ]
+      },
+      "exchange_rates": {},
+      "currency": "ARS",
+      "rules": [
+        {
+          "type": "descuento_por_umbral"
+        }
+      ]
+    }
+  ]
+}

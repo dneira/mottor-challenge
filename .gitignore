@@ -1,0 +1,10 @@
+.idea/
+.DS_Store
+**/vendor/
+**/node_modules/
+**/.env
+**/.env.backup
+**/.phpunit.result.cache
+web/dist/
+
+/entrega/

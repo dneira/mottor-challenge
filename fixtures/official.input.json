@@ -1,0 +1,92 @@
+{
+  "budget": {
+    "id": "PRE-2026-0418",
+    "client": "Agencia Norte",
+    "event": "Lanzamiento de producto · 120 personas",
+    "items": [
+      {
+        "id": 1,
+        "description": "Menú de tres pasos",
+        "category": "catering",
+        "quantity": 120,
+        "unit_price": 18000.0,
+        "currency": "ARS"
+      },
+      {
+        "id": 2,
+        "description": "Barra de tragos (módulo)",
+        "category": "catering",
+        "quantity": 3,
+        "unit_price": 150000.0,
+        "currency": "ARS"
+      },
+      {
+        "id": 3,
+        "description": "Sistema de sonido line array",
+        "category": "sonido",
+        "quantity": 1,
+        "unit_price": 1200.0,
+        "currency": "USD"
+      },
+      {
+        "id": 4,
+        "description": "Mesa redonda de 8",
+        "category": "mobiliario",
+        "quantity": 15,
+        "unit_price": 9500.0,
+        "currency": "ARS"
+      },
+      {
+        "id": 5,
+        "description": "Silla tiffany",
+        "category": "mobiliario",
+        "quantity": 120,
+        "unit_price": 1800.0,
+        "currency": "ARS"
+      },
+      {
+        "id": 6,
+        "description": "Coordinador en evento",
+        "category": "personal",
+        "quantity": 2,
+        "unit_price": 85000.0,
+        "currency": "ARS"
+      }
+    ]
+  },
+  "exchange_rates": {
+    "USD_ARS": 1450.0
+  },
+  "currency": "ARS",
+  "rules": [
+    {
+      "type": "quantity_promo",
+      "category": "mobiliario",
+      "buy": 3,
+      "pay": 2
+    },
+    {
+      "type": "category_discount",
+      "category": "catering",
+      "percent": 15
+    },
+    {
+      "type": "percentage_discount",
+      "percent": 10
+    },
+    {
+      "type": "fixed_discount",
+      "amount": 50000.0,
+      "currency": "ARS"
+    },
+    {
+      "type": "discount_cap",
+      "max_percent": 20
+    },
+    {
+      "type": "tax",
+      "name": "IVA",
+      "percent": 21
+    }
+  ]
+}

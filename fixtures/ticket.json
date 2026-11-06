@@ -1,0 +1,129 @@
+[
+  {
+    "name": "official meeting",
+    "input": "Reunión anual de accionistas · Auditorio Norte",
+    "expected": [
+      "Reunión anual de accionistas",
+      "· Auditorio Norte"
+    ]
+  },
+  {
+    "name": "official truncated event",
+    "input": "Fiesta corporativa de fin de año para toda la planta con cena de gala y show en vivo en el salón principal de Pilar Norte",
+    "expected": [
+      "Fiesta corporativa de fin de",
+      "año para toda la planta con",
+      "cena de gala y show en vivo",
+      "en el salón principal de…"
+    ]
+  },
+  {
+    "name": "official screen",
+    "input": "Pantalla LED 6×3 m con operador técnico",
+    "expected": [
+      "Pantalla LED 6×3 m con",
+      "operador técnico"
+    ]
+  },
+  {
+    "name": "official event",
+    "input": "Lanzamiento de producto · 120 personas",
+    "expected": [
+      "Lanzamiento de producto ·",
+      "120 personas"
+    ]
+  },
+  {
+    "name": "empty",
+    "input": "",
+    "expected": []
+  },
+  {
+    "name": "whitespace",
+    "input": " \t\n  ",
+    "expected": []
+  },
+  {
+    "name": "normalize whitespace",
+    "input": "  Hola\t mundo\n y todos  ",
+    "expected": [
+      "Hola mundo y todos"
+    ]
+  },
+  {
+    "name": "exact width",
+    "input": "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "expected": [
+      "aaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    ]
+  },
+  {
+    "name": "long word remainder shares line",
+    "input": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaa fin",
+    "expected": [
+      "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "a fin"
+    ]
+  },
+  {
+    "name": "two exact chunks",
+    "input": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "expected": [
+      "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    ]
+  },
+  {
+    "name": "exactly four lines",
+    "input": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "expected": [
+      "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    ]
+  },
+  {
+    "name": "fifth line truncates fourth",
+    "input": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "expected": [
+      "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaaaaaaaaaaaaa…"
+    ]
+  },
+  {
+    "name": "truncation strips trailing separator",
+    "input": "aaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbbbbbbbbbbb c extra",
+    "expected": [
+      "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "bbbbbbbbbbbbbbbbbbbbbbbbbb…"
+    ]
+  },
+  {
+    "name": "combining accents",
+    "input": "éééééééééééééééééééééééééééé",
+    "expected": [
+      "éééééééééééééééééééééééééééé"
+    ]
+  },
+  {
+    "name": "emoji grapheme",
+    "input": "👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻",
+    "expected": [
+      "👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻👩🏽‍💻",
+      "👩🏽‍💻"
+    ]
+  },
+  {
+    "name": "full line plus next word",
+    "input": "aaaaaaaaaaaaaaaaaaaaaaaaaaaa fin",
+    "expected": [
+      "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "fin"
+    ]
+  }
+]
